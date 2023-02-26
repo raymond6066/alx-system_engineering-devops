@@ -1,0 +1,7 @@
+https://miro.com/app/board/uXjVPjP_Zg8=/?share_link_id=972190619536
+ANSWER:
+In order to make all of our servers work together as a single unit, we have created a cluster server. This cluster server consists of three distinct servers: an application server, a web server and a database server. By having these servers work together as a single unit, it allows us to more efficiently manage our data and applications. 
+
+Furthermore, we have decided to add another HAproxy loadbalancer in order to distribute the workload across our three servers. This loadbalancer will work in conjunction with the other loadbalancer to ensure that the workload is evenly spread across all of our servers. This will enable us to more effectively and efficiently manage our data and applications. 
+
+Overall, by creating a cluster server and adding an additional loadbalancer, we are able to ensure that all of our servers are working together as a single unit and that the workload is evenly distributed. This will help us to maximize the efficiency of our data and applications management.

@@ -1,0 +1,7 @@
+https://miro.com/app/board/uXjVPjP_YXY=/?share_link_id=806672490722
+ANSWERS:
+We have implemented firewalls and monitoring tools to enhance security and performance of our application and server. Firewalls are software or hardware that act as a filter for the incoming and outgoing data, which is based on predefined rules. It blocks any unauthorized access to our network. In addition, we use HTTPS which is a secure form of HTTP that provides data encryption between two systems. This is enabled by the server sending a public key with SSL certification when an HTTPS request is made. The client also sends its credentials that match the SSL certificate, allowing for the data to be decrypted. 
+
+Monitoring tools are used to collect data about the performance, availability, and user experience of the application and/or server. This data is analyzed to identify any abnormalities that could be affecting performance and to assist in finding the source of the issue. The data is then converted into a readable format so that any problems can be identified and fixed quickly. The metrics monitored by these tools include the queries per second, to assess the scalability of the server to handle incoming traffic.
+
+However, there are potential issues with the infrastructure. SSL termination can put sensitive data at risk during transactions, as they should be conducted on a secured connection. Furthermore, any changes made to the master will be replicated to the slave, making it easy to lose data. In the event of a server failure, all of the components will be affected.
