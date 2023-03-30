@@ -1,6 +1,15 @@
-# Changes SSH config file
-exec { 'echo':
-  path    => 'usr/bin:/bin',
-  command => 'echo "    IdentityFile ~/.ssh/school\n    PasswordAuthentication no" >> /etc/ssh/ssh_config',
-  returns => [0,1],
+# make changes to config file using Puppet
+
+include stdlib
+
+file_line { 'Refuse to authenticate using a password':
+  ensure => present,
+  path   => '/etc/ssh/ssh_config',
+  line   => 'PasswordAuthentication no',
+}
+
+file_line { 'Use private key':
+  ensure => present,
+  path   => '/etc/ssh/ssh_config',
+  line   => 'IdentityFile ~/.ssh/school'
 }
