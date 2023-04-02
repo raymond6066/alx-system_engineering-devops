@@ -1,11 +1,11 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # Installs Nginx with the following configurations:
 #   Listens on port 80.
 #   Returns a page containing "Hello World!" when queried
 #   at the root with a curl GET request.
 
-sudo apt-get -y update
-sudo apt-get -y install nginx
-echo 'Hello World!' > /var/www/html/index.html
-
+sudo apt-get update -y
+sudo apt-get install nginx -y
+sudo sed -i 's/80 default_server/80/g' /etc/nginx/sites-available/default
 sudo service nginx restart
+curl localhost
